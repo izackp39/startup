@@ -2,7 +2,7 @@
 
 [My Notes](notes.md)
 
-A brief description of the application here: I am wanting to implement an outfit picker for snowboarding / skiing. This will be similar to the zen garden application shown as an example.
+Description: I am wanting to implement an outfit picker for snowboarding / skiing. This will be similar to the zen garden application shown as an example.
 
 > [!NOTE]
 > This is a template for your startup application. You must modify this `README.md` file for each phase of your development. You only need to fill in the section for each deliverable when that deliverable is submitted in Canvas. Without completing the section for a deliverable, the TA will not know what to look for when grading your submission. Feel free to add additional information to each deliverable description, but make sure you at least have the list of rubric items and a description of what you did for each item.
