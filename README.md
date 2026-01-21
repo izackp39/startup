@@ -1,8 +1,8 @@
-# Your startup name here
+# Ski Outfit Picker
 
 [My Notes](notes.md)
 
-Description: I am wanting to implement an outfit picker for snowboarding / skiing. This will be similar to the zen garden application shown as an example.
+Description: I am wanting to implement an outfit picker for skiing/snowboarding. This program will allow you to select combinations of helmets, jackets, and pants. You will be able to save these different combinations to a closet where you can view them later. This will be similar to the zen garden application shown as an example in the assignment details.
 
 > [!NOTE]
 > This is a template for your startup application. You must modify this `README.md` file for each phase of your development. You only need to fill in the section for each deliverable when that deliverable is submitted in Canvas. Without completing the section for a deliverable, the TA will not know what to look for when grading your submission. Feel free to add additional information to each deliverable description, but make sure you at least have the list of rubric items and a description of what you did for each item.
@@ -17,51 +17,68 @@ Description: I am wanting to implement an outfit picker for snowboarding / skiin
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] Proper use of Markdown
-- [ ] A concise and compelling elevator pitch
-- [ ] Description of key features
-- [ ] Description of how you will use each technology
-- [ ] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
+- [x] Proper use of Markdown
+- [x] A concise and compelling elevator pitch
+- [x] Description of key features
+- [x] Description of how you will use each technology
+- [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Do you ever struggle to choose a new ski outfit for the season or plan out good combos to keep you looking steezy on the mountain? Well look no furtuer, the Ski Outfit Picker is the one stop shop for you! This app allows you to explore outfit variations and didferent combos of helmets, ski jackets, and snow pants BEFORE you hit the mountain or purchase that new jacket!
 
 ### Design
 
-![Design image](placeholder.png)
+![Ski Outfit Picker Mocks](Outfit_Picker_Mock.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The sketch on the top left shows the initial login screen while the closet interface is displayed on the bottom left. The main outfit picker is displayed on the right. Users authenticate first, then select a helmet, jacket, and pants from card-based options with clear visual feedback for selected items. The closet view is where users can see previously saved outfit combinations. Each saved outfit displays the selected helmet, jacket, and pants together for easy comparison and recall.
 
 ```mermaid
 sequenceDiagram
-    actor You
-    actor Website
-    You->>Website: Replace this with your design
+    actor User
+    participant Frontend as React App
+    participant Backend as Service
+    participant DB as Database
+    participant API as Weather API
+
+    User->>Frontend: Log in
+    Frontend->>Backend: POST /login
+    Backend->>DB: Verify credentials
+    DB-->>Backend: Auth success
+    Backend-->>Frontend: Login confirmed
+
+    User->>Frontend: Select helmet, jacket, pants
+    Frontend->>API: Request current weather
+    API-->>Frontend: Weather data
+    User->>Frontend: Save outfit to closet
+    Frontend->>Backend: POST /closet
+    Backend->>DB: Store outfit
+    Backend-->>Frontend: Outfit saved
 ```
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Ability to scroll between different helmets, ski jackets, and ski pants and view different outfit combinations
+- Ability to save outfit combinations to a closet
+- Ability to get suggetions based on current weather
+- Notifications when other users save outfits
 
 ### Technologies
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Uses proper semantic HTML structure with two main pages: a login page and an outfit picker page. Includes sections for helmet, jacket, and pants selection, as well as navigation links to view saved outfits in the closet.
+- **CSS** - Provides responsive styling that looks good on different screens. Includes clean spacing, strong color contrast, and subtle animations to highlight selected gear and interactions.
+- **React** - Implements a single-page application with reusable components for login, outfit selection, and closet viewing. The UI updates based on user actions and authentication status.
+- **Service** - Backend service with endpoints for user registration, login, logout, retrieving gear options, and saving or retrieving outfits. Integrates a third-party weather API to enhance outfit suggestions.
+- **DB/Login** - Stores user authentication data, available gear items, and user-saved outfit combinations. Supports retrieving closet data specific to each authenticated user.
+- **WebSocket** - Uses WebSockets to broadcast real-time updates to other users when anyone saves a new outfit. 
 
 ## 🚀 AWS deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Server deployed and accessible with custom domain name** - [My server link](https://yourdomainnamehere.click).
+- [x] **Server deployed and accessible with custom domain name** - [My server link](https://izack.click).
 
 ## 🚀 HTML deliverable
 
