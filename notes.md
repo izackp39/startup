@@ -8,6 +8,18 @@
 - [Canvas](https://byu.instructure.com)
 - [MDN](https://developer.mozilla.org)
 
+## Github (https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+Some basic Git commands are:
+```
+git status
+git add
+git commit
+```
+
+The background color is `#ffffff` for light mode and `#000000` for dark mode.
+
+Link to the sample section: [Link Text](#sample-section).
+
 ## AWS
 
 My IP address is: 100.50.25.63
