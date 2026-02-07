@@ -84,15 +84,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - I created separate html pages for Home, Outfit Picker, and Closet View pages.
+- [x] **Proper HTML element usage** - Use of Body, nav, main, header, footer, etc, tags where applicable.
+- [x] **Links** - In the header on each page, there is a link that directs users between separate pages: Home, Outfit Picker, and Closet View
+- [x] **Text** - I updated the text on each page to mirror the mock-ups that I previously delivered and ensure proper navigation of site.
+- [x] **3rd party API placeholder** - On the closet view page, I included the weather on the bottom which will display today's weather and update accordingly.
+- [x] **Images** - Both the Outfit picker and closet view pages include many images
+- [x] **Login placeholder** - The Home Screen has a placeholder for login.
+- [x] **DB data placeholder** - The Closet View page supports the retreval of user-specific saved outfits and will update based on user and saved data.
+- [x] **WebSocket placeholder** - On the Outfit Picker page at the bottom, there is a placeholder for alerting users when anyone saves a new outfit.
 
 ## 🚀 CSS deliverable
 
